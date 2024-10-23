@@ -1,0 +1,64 @@
+﻿<Window xmlns:wpf="http://schemas.microsoft.com/netfx/2009/xaml/presentation"  x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Миронова Полина гр.3-47" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Размер матрицы: " VerticalAlignment="Center"/>
+            <TextBox x:Name="MatrixSizeTextBox" Width="50" VerticalAlignment="Center"/>
+            <Button x:Name="GenerateMatricesButton" Content="Сгенерировать матрицы" Click="GenerateMatricesButton_Click" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Text="Матрица A" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <TextBlock Text="Матрица B" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="MatrixAGrid" Grid.Column="0">
+            </Grid>
+            <Grid x:Name="OperationGrid" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="OperationTextBlock" Text="+" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15"/>
+            </Grid>
+            <Grid x:Name="MatrixBGrid" Grid.Column="2">
+            </Grid>
+        </Grid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <RadioButton x:Name="AddRadioButton" Content="Сложить" GroupName="Operation" IsChecked="True" Checked="OperationRadioButton_Checked"/>
+            <RadioButton x:Name="MultiplyRadioButton" Content="Умножить" GroupName="Operation" Margin="10,0,0,0" IsChecked="False" Checked="OperationRadioButton_Checked"/>
+            <Button x:Name="CalculateButton" Content="Рассчитать" Click="CalculateButton_Click" Margin="10,0,0,0"/>
+            <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
