@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         Title="Миронова Полина гр.3-47" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFFBEAEA">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            
+
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Размер матрицы: " VerticalAlignment="Center"/>
             <TextBox x:Name="MatrixSizeTextBox" Width="50" VerticalAlignment="Center"/>
-            <Button x:Name="GenerateMatricesButton" Content="Сгенерировать матрицы" Click="GenerateMatricesButton_Click" Margin="10,0,0,0"/>
+            <Button x:Name="GenerateMatricesButton" Content="Сгенерировать матрицы" Click="GenerateMatricesButton_Click" Margin="10,0,0,0" Background="#FFFF8AD0"/>
         </StackPanel>
 
         <Grid Grid.Row="1" Margin="10">
@@ -26,10 +26,10 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" Background="#FFFFB6EF">
                 <TextBlock Text="Матрица A" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" Background="#FFFFB6EF">
                 <TextBlock Text="Матрица B" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
@@ -40,8 +40,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid x:Name="MatrixAGrid" Grid.Column="0">
-            </Grid>
+            <Grid x:Name="MatrixAGrid" Grid.Column="0" Background="#FFFFB6EF"/>
             <Grid x:Name="OperationGrid" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -50,15 +49,15 @@
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="OperationTextBlock" Text="+" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15"/>
             </Grid>
-            <Grid x:Name="MatrixBGrid" Grid.Column="2">
+            <Grid x:Name="MatrixBGrid" Grid.Column="2" Background="#FFFFB6EF">
             </Grid>
         </Grid>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <RadioButton x:Name="AddRadioButton" Content="Сложить" GroupName="Operation" IsChecked="True" Checked="OperationRadioButton_Checked"/>
             <RadioButton x:Name="MultiplyRadioButton" Content="Умножить" GroupName="Operation" Margin="10,0,0,0" IsChecked="False" Checked="OperationRadioButton_Checked"/>
-            <Button x:Name="CalculateButton" Content="Рассчитать" Click="CalculateButton_Click" Margin="10,0,0,0"/>
-            <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Margin="10,0,0,0"/>
+            <Button x:Name="CalculateButton" Content="Рассчитать" Click="CalculateButton_Click" Margin="10,0,0,0" Background="#FFFFB6EF"/>
+            <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Margin="10,0,0,0" Background="#FFFFB6EF"/>
         </StackPanel>
     </Grid>
 </Window>
